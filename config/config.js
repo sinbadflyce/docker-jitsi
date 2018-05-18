@@ -3,14 +3,14 @@
 var config = { // eslint-disable-line no-unused-vars
 //    configLocation: './config.json', // see ./modules/HttpConfigFetch.js
     hosts: {
-        domain: 'prosody',
-        bridge: 'videobridge.prosody',
-        anonymousdomain: 'guest.prosody',
+        domain: 'jitsi.sinbadflyce.com',
+        bridge: 'videobridge.jitsi.sinbadflyce.com',
+        anonymousdomain: 'guest.jitsi.sinbadflyce.com',
         //authdomain: 'prosody',  // defaults to <domain>
-        muc: 'conference.prosody', // FIXME: use XEP-0030
+        muc: 'conference.jitsi.sinbadflyce.com', // FIXME: use XEP-0030
         //jirecon: 'jirecon.prosody',
         //call_control: 'callcontrol.prosody',
-        focus: 'focus.prosody', // defaults to 'focus.jitsi-meet.example.com'
+        focus: 'focus.jitsi.sinbadflyce.com', // defaults to 'focus.jitsi-meet.example.com'
     },
 //  getroomnode: function (path) { return 'someprefixpossiblybasedonpath'; },
 //  useStunTurn: true, // use XEP-0215 to fetch STUN and TURN server
@@ -18,7 +18,7 @@ var config = { // eslint-disable-line no-unused-vars
     useNicks: false,
     bosh: '//localhost:9090/http-bind', // FIXME: use xep-0156 for that
     clientNode: 'http://jitsi.org/jitsimeet', // The name of client node advertised in XEP-0115 'c' stanza
-    focusUserJid: 'focus@auth.prosody', // The real JID of focus participant - can be overridden here
+    focusUserJid: 'focus@auth.jitsi.sinbadflyce.com', // The real JID of focus participant - can be overridden here
     //defaultSipNumber: '', // Default SIP number
 
     // The STUN servers that will be used in the peer to peer connections

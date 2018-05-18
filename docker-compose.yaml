@@ -30,8 +30,8 @@ services:
         image: prosody/prosody:0.9.12
         environment:
             LOCAL: focus
-            DOMAIN: auth.prosody
-            PASSWORD: YOURSECRET3
+            DOMAIN: auth.jitsi.sinbadflyce.com
+            PASSWORD: Test1009
         networks:
             - backend
         expose:
@@ -47,10 +47,10 @@ services:
     jicofo:
         build: ./jicofo
         environment:
-            XMPP_HOST: prosody
-            XMPP_DOMAIN: prosody
-            JICOFO_XMPP_FOCUS_SECRET: YOURSECRET2
-            JICOFO_XMPP_FOCUS_USER_PASSWORD: YOURSECRET3
+            XMPP_HOST: jitsi.sinbadflyce.com
+            XMPP_DOMAIN: jitsi.sinbadflyce.com
+            JICOFO_XMPP_FOCUS_SECRET: Test1009
+            JICOFO_XMPP_FOCUS_USER_PASSWORD: Test1009
         networks:
             - backend
         restart: unless-stopped
@@ -58,8 +58,8 @@ services:
         build: ./videobridge
         environment:
             XMPP_HOST: 127.0.0.1 # using network_mode: host so prosody is reachable at 127.0.0.1:5347
-            XMPP_DOMAIN: prosody
-            VIDEOBRIDGE_XMPP_SECRET: YOURSECRET1
+            XMPP_DOMAIN: jitsi.sinbadflyce.com
+            VIDEOBRIDGE_XMPP_SECRET: Test1009
         network_mode: host
         restart: unless-stopped
 volumes:

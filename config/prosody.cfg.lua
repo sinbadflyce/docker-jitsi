@@ -19,7 +19,7 @@
 -- for the server. Note that you must create the accounts separately
 -- (see http://prosody.im/doc/creating_accounts for info)
 -- Example: admins = { "user1@example.com", "user2@example.net" }
-admins = { "focus@auth.prosody" }
+admins = { "focus@auth.jitsi.sinbadflyce.com" }
 daemonize = false
 cross_domain_bosh = true;
 component_ports = { 5347 }
@@ -173,7 +173,7 @@ log = {
 
 --VirtualHost "localhost"
 
-VirtualHost "prosody"
+VirtualHost "jitsi.sinbadflyce.com"
 	-- enabled = false -- Remove this line to enable this host
 	authentication = "anonymous"
 	-- Assign this host a certificate for TLS, otherwise it would use the one
@@ -192,10 +192,10 @@ VirtualHost "prosody"
 
 	c2s_require_encryption = false
 
-VirtualHost "auth.prosody"
+VirtualHost "auth.jitsi.sinbadflyce.com"
 	authentication = "internal_plain"
 
-VirtualHost "guest.prosody"
+VirtualHost "guest.jitsi.sinbadflyce.com"
 	authentication = "anonymous"
 
 ------ Components ------
@@ -218,10 +218,10 @@ VirtualHost "guest.prosody"
 --Component "gateway.example.com"
 --	component_secret = "password"
 
-Component "conference.prosody" "muc"
+Component "conference.jitsi.sinbadflyce.com" "muc"
 
-Component "videobridge.prosody"
-    component_secret = "YOURSECRET1"
+Component "videobridge.jitsi.sinbadflyce.com"
+    component_secret = "Test1009"
 
-Component "focus.prosody"
-	component_secret = "YOURSECRET2"
+Component "focus.jitsi.sinbadflyce.com"
+	component_secret = "Test1009"
